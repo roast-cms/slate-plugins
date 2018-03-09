@@ -514,7 +514,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _slateDropOrPasteImages = require('slate-drop-or-paste-images');
+var _slateDropOrPasteImages = require('@roast-cms/slate-drop-or-paste-images');
 
 var _slateDropOrPasteImages2 = _interopRequireDefault(_slateDropOrPasteImages);
 
@@ -667,7 +667,7 @@ var Example = function (_React$Component2) {
 
 exports.default = Example;
 
-},{"./value.json":7,"react":423,"slate":453,"slate-drop-or-paste-images":469,"slate-react":429}],7:[function(require,module,exports){
+},{"./value.json":7,"@roast-cms/slate-drop-or-paste-images":469,"react":423,"slate":453,"slate-react":429}],7:[function(require,module,exports){
 module.exports={
   "document": {
     "nodes": [
@@ -58054,7 +58054,6 @@ function normalizeMatcher(matcher) {
  */
 
 exports.default = AutoReplace;
-
 },{"is-hotkey":465,"type-of":461}],465:[function(require,module,exports){
 'use strict';
 
@@ -58278,7 +58277,6 @@ function CollapseOnEscape() {
  */
 
 exports.default = CollapseOnEscape;
-
 },{"to-pascal-case":459}],467:[function(require,module,exports){
 'use strict';
 
@@ -58345,7 +58343,6 @@ function hasArrayBufferView() {
  */
 
 exports.default = dataUriToBlob;
-
 },{}],468:[function(require,module,exports){
 'use strict';
 
@@ -58392,7 +58389,6 @@ function srcToDataUri(url, callback) {
  */
 
 exports.default = srcToDataUri;
-
 },{}],469:[function(require,module,exports){
 'use strict';
 
@@ -58464,7 +58460,7 @@ function DropOrPasteImages() {
    */
 
   function asyncApplyChange(change, editor, file) {
-    return _es6Promise2.default.resolve(insertImage(change, file)).then(function () {
+    return _es6Promise2.default.resolve(insertImage(change, file, editor)).then(function () {
       editor.onChange(change);
     });
   }
@@ -58624,7 +58620,6 @@ function DropOrPasteImages() {
  */
 
 exports.default = DropOrPasteImages;
-
 },{"./load-image-file":470,"es6-promise":14,"is-image":56,"is-url":59,"mime-types":473,"path":231,"slate-dev-logger":474,"slate-react":429}],470:[function(require,module,exports){
 'use strict';
 
@@ -58674,7 +58669,6 @@ function loadImageFile(url, callback) {
  */
 
 exports.default = loadImageFile;
-
 },{"./data-uri-to-blob":467,"./image-to-data-uri":468,"is-data-uri":53}],471:[function(require,module,exports){
 module.exports={
   "application/1d-interleaved-parityfec": {
@@ -66020,7 +66014,6 @@ function PasteLinkify() {
  */
 
 exports.default = PasteLinkify;
-
 },{"is-url":59,"slate-react":429,"to-pascal-case":459}],476:[function(require,module,exports){
 'use strict';
 
@@ -66063,5 +66056,4 @@ function SoftBreak() {
  */
 
 exports.default = SoftBreak;
-
 },{}]},{},[1]);
